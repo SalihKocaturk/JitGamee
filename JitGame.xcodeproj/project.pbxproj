@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		767A49C09245969C400F3A77 /* Pods_JitGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4217C9741C6FB3BEDE2A2BB /* Pods_JitGameTests.framework */; };
+		94942F93201F3CB19DC529F7 /* Pods_JitGame_JitGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF7239355646ADFED0295E4 /* Pods_JitGame_JitGameUITests.framework */; };
+		95220CC1F451B5FEDC8D8B7B /* Pods_JitGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442C0EC3B486EB485F896272 /* Pods_JitGame.framework */; };
+		EE3FFA152A97767700B231FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE3FFA142A97767700B231FA /* GoogleService-Info.plist */; };
+		EE3FFA162A97767700B231FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE3FFA142A97767700B231FA /* GoogleService-Info.plist */; };
+		EE3FFA172A97767700B231FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE3FFA142A97767700B231FA /* GoogleService-Info.plist */; };
+		EEDD41D32A95F7EA00DFB301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD41D22A95F7EA00DFB301 /* AppDelegate.swift */; };
+		EEDD41D52A95F7EA00DFB301 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EEDD41D42A95F7EA00DFB301 /* GameScene.sks */; };
+		EEDD41D72A95F7EA00DFB301 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = EEDD41D62A95F7EA00DFB301 /* Actions.sks */; };
+		EEDD41D92A95F7EA00DFB301 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD41D82A95F7EA00DFB301 /* GameScene.swift */; };
+		EEDD41DB2A95F7EA00DFB301 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD41DA2A95F7EA00DFB301 /* GameViewController.swift */; };
+		EEDD41DE2A95F7EA00DFB301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDD41DC2A95F7EA00DFB301 /* Main.storyboard */; };
+		EEDD41E02A95F7EB00DFB301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDD41DF2A95F7EB00DFB301 /* Assets.xcassets */; };
+		EEDD41E32A95F7EB00DFB301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDD41E12A95F7EB00DFB301 /* LaunchScreen.storyboard */; };
+		EEDD41ED2A95F7EB00DFB301 /* JitGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD41EC2A95F7EB00DFB301 /* JitGameTests.swift */; };
+		EEDD41F72A95F7EB00DFB301 /* JitGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD41F62A95F7EB00DFB301 /* JitGameUITests.swift */; };
+		EEDD41F92A95F7EB00DFB301 /* JitGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD41F82A95F7EB00DFB301 /* JitGameUITestsLaunchTests.swift */; };
+		EEDD42062A95FB9100DFB301 /* SigningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD42052A95FB9100DFB301 /* SigningViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEDD41E92A95F7EB00DFB301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEDD41C72A95F7EA00DFB301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEDD41CE2A95F7EA00DFB301;
+			remoteInfo = JitGame;
+		};
+		EEDD41F32A95F7EB00DFB301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEDD41C72A95F7EA00DFB301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEDD41CE2A95F7EA00DFB301;
+			remoteInfo = JitGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		082BB86478A2D843FC628AC8 /* Pods-JitGame-JitGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitGame-JitGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-JitGame-JitGameUITests/Pods-JitGame-JitGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		19B864751E7C8A37DEED3B7F /* Pods-JitGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitGame.release.xcconfig"; path = "Target Support Files/Pods-JitGame/Pods-JitGame.release.xcconfig"; sourceTree = "<group>"; };
+		36203C760C7EE32B03AD5D9F /* Pods-JitGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitGameTests.release.xcconfig"; path = "Target Support Files/Pods-JitGameTests/Pods-JitGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		3AF7239355646ADFED0295E4 /* Pods_JitGame_JitGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JitGame_JitGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		442C0EC3B486EB485F896272 /* Pods_JitGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JitGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		528979862DE3B01106522B70 /* Pods-JitGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitGame.debug.xcconfig"; path = "Target Support Files/Pods-JitGame/Pods-JitGame.debug.xcconfig"; sourceTree = "<group>"; };
+		AB7644DB1B6896F502282222 /* Pods-JitGame-JitGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitGame-JitGameUITests.release.xcconfig"; path = "Target Support Files/Pods-JitGame-JitGameUITests/Pods-JitGame-JitGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E4217C9741C6FB3BEDE2A2BB /* Pods_JitGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JitGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3FFA142A97767700B231FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEDD41CF2A95F7EA00DFB301 /* JitGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JitGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDD41D22A95F7EA00DFB301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEDD41D42A95F7EA00DFB301 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		EEDD41D62A95F7EA00DFB301 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		EEDD41D82A95F7EA00DFB301 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EEDD41DA2A95F7EA00DFB301 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EEDD41DD2A95F7EA00DFB301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEDD41DF2A95F7EB00DFB301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEDD41E22A95F7EB00DFB301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EEDD41E82A95F7EB00DFB301 /* JitGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JitGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDD41EC2A95F7EB00DFB301 /* JitGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JitGameTests.swift; sourceTree = "<group>"; };
+		EEDD41F22A95F7EB00DFB301 /* JitGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JitGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDD41F62A95F7EB00DFB301 /* JitGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JitGameUITests.swift; sourceTree = "<group>"; };
+		EEDD41F82A95F7EB00DFB301 /* JitGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JitGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEDD42052A95FB9100DFB301 /* SigningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningViewController.swift; sourceTree = "<group>"; };
+		F81A70A954586FE0B020282E /* Pods-JitGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JitGameTests.debug.xcconfig"; path = "Target Support Files/Pods-JitGameTests/Pods-JitGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEDD41CC2A95F7EA00DFB301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95220CC1F451B5FEDC8D8B7B /* Pods_JitGame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEDD41E52A95F7EB00DFB301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767A49C09245969C400F3A77 /* Pods_JitGameTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEDD41EF2A95F7EB00DFB301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94942F93201F3CB19DC529F7 /* Pods_JitGame_JitGameUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2662C2F2D80235B46C9FAE6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				528979862DE3B01106522B70 /* Pods-JitGame.debug.xcconfig */,
+				19B864751E7C8A37DEED3B7F /* Pods-JitGame.release.xcconfig */,
+				082BB86478A2D843FC628AC8 /* Pods-JitGame-JitGameUITests.debug.xcconfig */,
+				AB7644DB1B6896F502282222 /* Pods-JitGame-JitGameUITests.release.xcconfig */,
+				F81A70A954586FE0B020282E /* Pods-JitGameTests.debug.xcconfig */,
+				36203C760C7EE32B03AD5D9F /* Pods-JitGameTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		31E050B40CF4D76C52FA4900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				442C0EC3B486EB485F896272 /* Pods_JitGame.framework */,
+				3AF7239355646ADFED0295E4 /* Pods_JitGame_JitGameUITests.framework */,
+				E4217C9741C6FB3BEDE2A2BB /* Pods_JitGameTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEDD41C62A95F7EA00DFB301 = {
+			isa = PBXGroup;
+			children = (
+				EEDD41D12A95F7EA00DFB301 /* JitGame */,
+				EEDD41EB2A95F7EB00DFB301 /* JitGameTests */,
+				EEDD41F52A95F7EB00DFB301 /* JitGameUITests */,
+				EEDD41D02A95F7EA00DFB301 /* Products */,
+				2662C2F2D80235B46C9FAE6B /* Pods */,
+				31E050B40CF4D76C52FA4900 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EEDD41D02A95F7EA00DFB301 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEDD41CF2A95F7EA00DFB301 /* JitGame.app */,
+				EEDD41E82A95F7EB00DFB301 /* JitGameTests.xctest */,
+				EEDD41F22A95F7EB00DFB301 /* JitGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEDD41D12A95F7EA00DFB301 /* JitGame */ = {
+			isa = PBXGroup;
+			children = (
+				EEDD41D22A95F7EA00DFB301 /* AppDelegate.swift */,
+				EEDD41D42A95F7EA00DFB301 /* GameScene.sks */,
+				EEDD41D62A95F7EA00DFB301 /* Actions.sks */,
+				EEDD41D82A95F7EA00DFB301 /* GameScene.swift */,
+				EEDD41DA2A95F7EA00DFB301 /* GameViewController.swift */,
+				EEDD41DC2A95F7EA00DFB301 /* Main.storyboard */,
+				EEDD41DF2A95F7EB00DFB301 /* Assets.xcassets */,
+				EEDD41E12A95F7EB00DFB301 /* LaunchScreen.storyboard */,
+				EE3FFA142A97767700B231FA /* GoogleService-Info.plist */,
+				EEDD42052A95FB9100DFB301 /* SigningViewController.swift */,
+			);
+			path = JitGame;
+			sourceTree = "<group>";
+		};
+		EEDD41EB2A95F7EB00DFB301 /* JitGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEDD41EC2A95F7EB00DFB301 /* JitGameTests.swift */,
+			);
+			path = JitGameTests;
+			sourceTree = "<group>";
+		};
+		EEDD41F52A95F7EB00DFB301 /* JitGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EEDD41F62A95F7EB00DFB301 /* JitGameUITests.swift */,
+				EEDD41F82A95F7EB00DFB301 /* JitGameUITestsLaunchTests.swift */,
+			);
+			path = JitGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEDD41CE2A95F7EA00DFB301 /* JitGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEDD41FC2A95F7EB00DFB301 /* Build configuration list for PBXNativeTarget "JitGame" */;
+			buildPhases = (
+				B415C9464F852486C3FB1AFA /* [CP] Check Pods Manifest.lock */,
+				EEDD41CB2A95F7EA00DFB301 /* Sources */,
+				EEDD41CC2A95F7EA00DFB301 /* Frameworks */,
+				EEDD41CD2A95F7EA00DFB301 /* Resources */,
+				BE60171469285BD94E9631C3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JitGame;
+			productName = JitGame;
+			productReference = EEDD41CF2A95F7EA00DFB301 /* JitGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEDD41E72A95F7EB00DFB301 /* JitGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEDD41FF2A95F7EB00DFB301 /* Build configuration list for PBXNativeTarget "JitGameTests" */;
+			buildPhases = (
+				EFF3F07FC1961C636B939015 /* [CP] Check Pods Manifest.lock */,
+				EEDD41E42A95F7EB00DFB301 /* Sources */,
+				EEDD41E52A95F7EB00DFB301 /* Frameworks */,
+				EEDD41E62A95F7EB00DFB301 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEDD41EA2A95F7EB00DFB301 /* PBXTargetDependency */,
+			);
+			name = JitGameTests;
+			productName = JitGameTests;
+			productReference = EEDD41E82A95F7EB00DFB301 /* JitGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EEDD41F12A95F7EB00DFB301 /* JitGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEDD42022A95F7EB00DFB301 /* Build configuration list for PBXNativeTarget "JitGameUITests" */;
+			buildPhases = (
+				390DE94406760DEC2159229C /* [CP] Check Pods Manifest.lock */,
+				EEDD41EE2A95F7EB00DFB301 /* Sources */,
+				EEDD41EF2A95F7EB00DFB301 /* Frameworks */,
+				EEDD41F02A95F7EB00DFB301 /* Resources */,
+				2B41E6D37812D2100084BF01 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEDD41F42A95F7EB00DFB301 /* PBXTargetDependency */,
+			);
+			name = JitGameUITests;
+			productName = JitGameUITests;
+			productReference = EEDD41F22A95F7EB00DFB301 /* JitGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEDD41C72A95F7EA00DFB301 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EEDD41CE2A95F7EA00DFB301 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					EEDD41E72A95F7EB00DFB301 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EEDD41CE2A95F7EA00DFB301;
+					};
+					EEDD41F12A95F7EB00DFB301 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EEDD41CE2A95F7EA00DFB301;
+					};
+				};
+			};
+			buildConfigurationList = EEDD41CA2A95F7EA00DFB301 /* Build configuration list for PBXProject "JitGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEDD41C62A95F7EA00DFB301;
+			productRefGroup = EEDD41D02A95F7EA00DFB301 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEDD41CE2A95F7EA00DFB301 /* JitGame */,
+				EEDD41E72A95F7EB00DFB301 /* JitGameTests */,
+				EEDD41F12A95F7EB00DFB301 /* JitGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEDD41CD2A95F7EA00DFB301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDD41DE2A95F7EA00DFB301 /* Main.storyboard in Resources */,
+				EEDD41D52A95F7EA00DFB301 /* GameScene.sks in Resources */,
+				EEDD41E02A95F7EB00DFB301 /* Assets.xcassets in Resources */,
+				EEDD41E32A95F7EB00DFB301 /* LaunchScreen.storyboard in Resources */,
+				EEDD41D72A95F7EA00DFB301 /* Actions.sks in Resources */,
+				EE3FFA152A97767700B231FA /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEDD41E62A95F7EB00DFB301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3FFA162A97767700B231FA /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEDD41F02A95F7EB00DFB301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3FFA172A97767700B231FA /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B41E6D37812D2100084BF01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JitGame-JitGameUITests/Pods-JitGame-JitGameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JitGame-JitGameUITests/Pods-JitGame-JitGameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JitGame-JitGameUITests/Pods-JitGame-JitGameUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		390DE94406760DEC2159229C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JitGame-JitGameUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B415C9464F852486C3FB1AFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JitGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE60171469285BD94E9631C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JitGame/Pods-JitGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JitGame/Pods-JitGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JitGame/Pods-JitGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFF3F07FC1961C636B939015 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JitGameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEDD41CB2A95F7EA00DFB301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDD42062A95FB9100DFB301 /* SigningViewController.swift in Sources */,
+				EEDD41D92A95F7EA00DFB301 /* GameScene.swift in Sources */,
+				EEDD41DB2A95F7EA00DFB301 /* GameViewController.swift in Sources */,
+				EEDD41D32A95F7EA00DFB301 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEDD41E42A95F7EB00DFB301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDD41ED2A95F7EB00DFB301 /* JitGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEDD41EE2A95F7EB00DFB301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDD41F92A95F7EB00DFB301 /* JitGameUITestsLaunchTests.swift in Sources */,
+				EEDD41F72A95F7EB00DFB301 /* JitGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEDD41EA2A95F7EB00DFB301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEDD41CE2A95F7EA00DFB301 /* JitGame */;
+			targetProxy = EEDD41E92A95F7EB00DFB301 /* PBXContainerItemProxy */;
+		};
+		EEDD41F42A95F7EB00DFB301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEDD41CE2A95F7EA00DFB301 /* JitGame */;
+			targetProxy = EEDD41F32A95F7EB00DFB301 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EEDD41DC2A95F7EA00DFB301 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEDD41DD2A95F7EA00DFB301 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EEDD41E12A95F7EB00DFB301 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEDD41E22A95F7EB00DFB301 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEDD41FA2A95F7EB00DFB301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEDD41FB2A95F7EB00DFB301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEDD41FD2A95F7EB00DFB301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528979862DE3B01106522B70 /* Pods-JitGame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TA7AZTCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salihkocat-rk.JitGame";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEDD41FE2A95F7EB00DFB301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B864751E7C8A37DEED3B7F /* Pods-JitGame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TA7AZTCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salihkocat-rk.JitGame";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EEDD42002A95F7EB00DFB301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F81A70A954586FE0B020282E /* Pods-JitGameTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TA7AZTCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salihkocat-rk.JitGameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JitGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JitGame";
+			};
+			name = Debug;
+		};
+		EEDD42012A95F7EB00DFB301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36203C760C7EE32B03AD5D9F /* Pods-JitGameTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TA7AZTCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salihkocat-rk.JitGameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JitGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JitGame";
+			};
+			name = Release;
+		};
+		EEDD42032A95F7EB00DFB301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082BB86478A2D843FC628AC8 /* Pods-JitGame-JitGameUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TA7AZTCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salihkocat-rk.JitGameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JitGame;
+			};
+			name = Debug;
+		};
+		EEDD42042A95F7EB00DFB301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB7644DB1B6896F502282222 /* Pods-JitGame-JitGameUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TA7AZTCY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salihkocat-rk.JitGameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JitGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEDD41CA2A95F7EA00DFB301 /* Build configuration list for PBXProject "JitGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDD41FA2A95F7EB00DFB301 /* Debug */,
+				EEDD41FB2A95F7EB00DFB301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEDD41FC2A95F7EB00DFB301 /* Build configuration list for PBXNativeTarget "JitGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDD41FD2A95F7EB00DFB301 /* Debug */,
+				EEDD41FE2A95F7EB00DFB301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEDD41FF2A95F7EB00DFB301 /* Build configuration list for PBXNativeTarget "JitGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDD42002A95F7EB00DFB301 /* Debug */,
+				EEDD42012A95F7EB00DFB301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEDD42022A95F7EB00DFB301 /* Build configuration list for PBXNativeTarget "JitGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDD42032A95F7EB00DFB301 /* Debug */,
+				EEDD42042A95F7EB00DFB301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEDD41C72A95F7EA00DFB301 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_JitGame {
+  umbrella header "Pods-JitGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

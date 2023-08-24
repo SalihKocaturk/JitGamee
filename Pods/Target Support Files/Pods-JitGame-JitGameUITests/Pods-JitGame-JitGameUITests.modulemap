@@ -1,0 +1,6 @@
+framework module Pods_JitGame_JitGameUITests {
+  umbrella header "Pods-JitGame-JitGameUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

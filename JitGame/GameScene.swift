@@ -14,19 +14,26 @@ import SDWebImage
 class GameScene: SKScene {
     var timer = Timer()
     var counter = 0
+    var documentidarray = [String]()
     var score = 0
     var hideTimer = Timer()
     var highScore = 0
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     var clickBox = SKSpriteNode()
+    var scoreLabel = SKLabelNode()
     var k = 0//timer starting value
     private var lastUpdateTime : TimeInterval = 0
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
     override func sceneDidLoad() {
-        
+       
+        scoreLabel.fontName = "Helvetica"
+        scoreLabel.fontSize = 60
+        scoreLabel.text = "0"
+        scoreLabel.position = CGPoint(x: 0, y: self.frame.height / 4)
+        scoreLabel.zPosition = 2
         let boxtexture = SKTexture(imageNamed: "photoforapp")
         let size = CGSize(width: boxtexture.size().width / 12, height: boxtexture.size().height / 12)
          clickBox = childNode(withName: "clickToPlay") as! SKSpriteNode
@@ -48,6 +55,7 @@ class GameScene: SKScene {
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
         }
+        self.addChild(scoreLabel)
     }
     
     
@@ -89,12 +97,20 @@ class GameScene: SKScene {
                     if let sprite = node as? SKSpriteNode{
                         
                         if sprite == clickBox{
-                            if k == 0{
+                            
                                 
+                        
+                                k = k + 1
+                            
+                            for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+                            
+                            score += 1
+                            if score > 1 {
+                                score = score - 1
                                 let firestoreDatabase = Firestore.firestore()//firstore databesee erişiyoruz
                                 var firestorereferenc: DocumentReference? = nil
-                                let firestorepost = ["timerStart": k] as [String : Int]
-                                firestorereferenc = firestoreDatabase.collection("posts").addDocument(data: firestorepost, completion: {(error) in//referansa değerleri koyuyoruz
+                                let firestorepost = ["Score": score] as [String : Int]
+                                firestorereferenc = firestoreDatabase.collection("Posts").addDocument(data: firestorepost, completion: {(error) in//referansa değerleri koyuyoruz
                                     if error != nil{
                                         print("error", error?.localizedDescription ?? "error")
                                         
@@ -105,12 +121,9 @@ class GameScene: SKScene {
                                     }
                                     
                                 })
-                                k = k + 1
-                            }
-                            for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-                            
-                            score += 1
-                            print(score)
+                                
+                            }//if gameove == true
+                            scoreLabel.text = "Your Score:\(String(score))"
                             
                         }
                         
@@ -199,5 +212,37 @@ class GameScene: SKScene {
         }
         
         self.lastUpdateTime = currentTime
+    }
+    func getdatafromfirestore(){
+        let firestoredb = Firestore.firestore()
+        firestoredb.collection("GS").addSnapshotListener { snapshot, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "error")
+            }else{
+                if snapshot?.isEmpty == false{
+                    for document in snapshot!.documents{
+                        let documentID = document.documentID
+                        self.documentidarray.append(documentID)
+                        
+                        
+                        if let gameStarted = document.get("gameStarted") as? Int {
+                            print("ilumni")
+                           
+                            
+                            
+                            
+                         }
+                         
+                            
+                        
+                        
+                    }
+                   
+              
+                   
+                  
+                }
+            }
+        }
     }
 }

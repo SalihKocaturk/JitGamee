@@ -14,8 +14,10 @@ import FirebaseCore
 class GameViewController: UIViewController {
     //Variables
     
+    @IBOutlet weak var restartButton: UIButton!
     var documentidarray = [String]()
     var enemyScore = 0
+    var OkbuttonPressed = 0
         var score = 0
         var gameStarted = 0
         var timer = Timer()
@@ -25,7 +27,7 @@ class GameViewController: UIViewController {
         var highScore = 0
     @IBOutlet weak var timeLabel: UILabel!
     override func viewDidLoad() {
-        
+        restartButton.isHidden = true
         super.viewDidLoad()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
         counter = 10
@@ -68,10 +70,38 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    @IBAction func RestartButtonTabbed(_ sender: Any) {
+        self.gameStarted = 1
+        let firestoreDatabase = Firestore.firestore()//firstore databesee erişiyoruz
+        var firestorereferenc: DocumentReference? = nil
+        let firestorepost = ["gameStarted": self.gameStarted] as [String : Int]
+        firestorereferenc = firestoreDatabase.collection("GS").addDocument(data: firestorepost, completion: {(error) in//referansa değerleri koyuyoruz
+            if error != nil{
+                print("error", error?.localizedDescription ?? "error")
+                
+            }else{
+                
+                
+                
+            }
+            
+        })
+        
+        self.counter = 10
+        self.timeLabel.text = String(self.counter)
+        
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
+
+        restartButton.isHidden = true
+        
+        
+    }
     @objc func countDown() {
              
              counter -= 1
-             timeLabel.text = String(counter)
+             timeLabel.text = "Time:\(String(counter))"
              
              if counter == 0 {
                  timer.invalidate()
@@ -93,10 +123,35 @@ class GameViewController: UIViewController {
                  //Alert
                  
                  let alert = UIAlertController(title: "Time's Up", message: "Do you want to play again?", preferredStyle: UIAlertController.Style.alert)
-                 let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+                 let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel ){(UIAlertAction) in
+                     self.OkbuttonPressed = 1
+                     self.restartButton.isHidden = false
+                     let firestoreDatabase = Firestore.firestore()//firstore databesee erişiyoruz
+                     var firestorereferenc: DocumentReference? = nil
+                     let firestorepost = ["okBut": self.OkbuttonPressed] as [String : Int]
+                     firestorereferenc = firestoreDatabase.collection("OS").addDocument(data: firestorepost, completion: {(error) in//referansa değerleri koyuyoruz
+                         if error != nil{
+                             print("error", error?.localizedDescription ?? "error")
+                             
+                         }else{
+                             self.restartButton.isHidden = false
+                             
+                             
+                         }
+                         
+                     })
+                     
+                     self.counter = 10
+                     self.timeLabel.text = String(self.counter)
+                     
+                     
+                     
+                     
+                 }
                  
                  let replayButton = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { (UIAlertAction) in
                      //replay function
+                     self.restartButton.isHidden = true
                      self.gameStarted = 1
                      let firestoreDatabase = Firestore.firestore()//firstore databesee erişiyoruz
                      var firestorereferenc: DocumentReference? = nil

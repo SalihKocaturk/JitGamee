@@ -12,12 +12,15 @@ import Firebase
 import FirebaseCore
 import SDWebImage
 class GameScene: SKScene {
+    var openedNow = 0
     var timer = Timer()
     var counter = 0
+    var forOkButton = 0//for assigning the value of okButton
     var documentidarray = [String]()
     var score = 0
     var hideTimer = Timer()
     var highScore = 0
+    var obh = 0//for not being able to play the game while okeybutton is clicked
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     var clickBox = SKSpriteNode()
@@ -28,7 +31,8 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     override func sceneDidLoad() {
-       
+       getReplayButton()
+    getOkButton()
         scoreLabel.fontName = "Helvetica"
         scoreLabel.fontSize = 60
         scoreLabel.text = "0"
@@ -83,7 +87,7 @@ class GameScene: SKScene {
     
     @objc override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first{
-         
+           
 
             let touchLocation = touch.location(in:self)
             let touchNodes = nodes(at: touchLocation)//değdiğimiz lokasyondaki nodelar bird nodeuna eşitse....
@@ -95,38 +99,39 @@ class GameScene: SKScene {
                 for node in touchNodes {
                     
                     if let sprite = node as? SKSpriteNode{
-                        
-                        if sprite == clickBox{
-                            
+                        if forOkButton != 1 || openedNow == 0{
+                            if sprite == clickBox{
                                 
-                        
+                                self.clickBox.texture = SKTexture(imageNamed: "photoforapp1")
+                                
+                                
                                 k = k + 1
-                            
-                            for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-                            
-                            score += 1
-                            if score > 1 {
-                                score = score - 1
-                                let firestoreDatabase = Firestore.firestore()//firstore databesee erişiyoruz
-                                var firestorereferenc: DocumentReference? = nil
-                                let firestorepost = ["Score": score] as [String : Int]
-                                firestorereferenc = firestoreDatabase.collection("Posts").addDocument(data: firestorepost, completion: {(error) in//referansa değerleri koyuyoruz
-                                    if error != nil{
-                                        print("error", error?.localizedDescription ?? "error")
-                                        
-                                    }else{
-                                        
-                                        
-                                        
-                                    }
-                                    
-                                })
                                 
-                            }//if gameove == true
-                            scoreLabel.text = "Your Score:\(String(score))"
-                            
+                                for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+                                
+                                score += 1
+                                if score > 1 {
+                                    score = score - 1
+                                    let firestoreDatabase = Firestore.firestore()//firstore databesee erişiyoruz
+                                    var firestorereferenc: DocumentReference? = nil
+                                    let firestorepost = ["Score": score] as [String : Int]
+                                    firestorereferenc = firestoreDatabase.collection("Posts").addDocument(data: firestorepost, completion: {(error) in//referansa değerleri koyuyoruz
+                                        if error != nil{
+                                            print("error", error?.localizedDescription ?? "error")
+                                            
+                                        }else{
+                                            
+                                            
+                                            
+                                        }
+                                        
+                                    })
+                                    
+                                }//if gameove == true
+                                scoreLabel.text = "Your Score:\(String(score))"
+                                
+                            }
                         }
-                        
                     }
                 }
                 
@@ -213,7 +218,7 @@ class GameScene: SKScene {
         
         self.lastUpdateTime = currentTime
     }
-    func getdatafromfirestore(){
+    func getReplayButton(){
         let firestoredb = Firestore.firestore()
         firestoredb.collection("GS").addSnapshotListener { snapshot, error in
             if error != nil {
@@ -225,9 +230,15 @@ class GameScene: SKScene {
                         self.documentidarray.append(documentID)
                         
                         
-                        if let gameStarted = document.get("gameStarted") as? Int {
+                        if var gameStarted = document.get("gameStarted") as? Int {
                             print("ilumni")
-                           
+                            if gameStarted == 1 {
+                                self.forOkButton = 0
+                                self.score = 0
+                                
+                            }else{
+                                self.clickBox.texture = SKTexture(imageNamed: "photoforapp")
+                            }
                             
                             
                             
@@ -242,6 +253,60 @@ class GameScene: SKScene {
                    
                   
                 }
+            }
+        }
+    }
+    func getOkButton(){
+        let firestoredb = Firestore.firestore()
+        firestoredb.collection("OS").addSnapshotListener { snapshot, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "error")
+            }else{
+                if snapshot?.isEmpty == false{
+                    for document in snapshot!.documents{
+                        let documentID = document.documentID
+                        self.documentidarray.append(documentID)
+                        
+                        
+                        if var okbut = document.get("okBut") as? Int {
+                            print("ilumni")
+                            if okbut == 1 {
+                                self.openedNow == 1
+                                self.forOkButton = 1
+                                self.score = 0
+                                self.clickBox.texture = SKTexture(imageNamed: "photoforapp")
+                                
+                            }
+                            
+                            
+                            
+                         }
+                         
+                            
+                        
+                        
+                    }
+                   
+              
+                   
+                  
+                }
+            }
+        }
+    }
+    func delete(collection: CollectionReference, batchSize: Int = 100) {
+        // Limit query to avoid out-of-memory errors on large collections.
+        // When deleting a collection guaranteed to fit in memory,
+        // batching can be avoided entirely.
+        collection.limit(to: batchSize).getDocuments { (docset, error) in
+            // An error occurred.
+            let docset = docset
+            let batch = collection.firestore.batch()
+            docset?.documents.forEach {
+                batch.deleteDocument($0.reference)
+            }
+            batch.commit {_ in
+                self.delete(collection: collection, batchSize: batchSize)
             }
         }
     }

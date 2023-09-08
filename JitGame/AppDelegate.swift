@@ -10,16 +10,22 @@ import CoreData
 import Firebase
 import FirebaseCore
 import FirebaseAuth
-
+import GoogleSignIn
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+   
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        
+      return GIDSignIn.sharedInstance.handle(url)
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         FirebaseApp.configure()
-        // Override point for customization after application launch.
         return true
     }
 
@@ -37,8 +43,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        let currentuser = Auth.auth().currentUser
+        
+        if currentuser != nil {
+            let board = UIStoryboard(name: "Main", bundle: nil)
+            let tabbar = board.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+            window?.rootViewController = tabbar
+        }
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
+    
 
 
 }

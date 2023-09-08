@@ -11,6 +11,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
+pod 'GoogleSignIn'
 pod 'SDWebImage', '~> 5.0'
   target 'JitGameTests' do
     inherit! :search_paths

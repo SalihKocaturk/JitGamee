@@ -275,7 +275,6 @@ class GameScene: SKScene {
                                 self.forOkButton = 1
                                 self.score = 0
                                 self.clickBox.texture = SKTexture(imageNamed: "photoforapp")
-                                
                             }
                             
                             

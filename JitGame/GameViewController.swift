@@ -25,9 +25,14 @@ class GameViewController: UIViewController {
         var kennyArray = [UIImageView]()
         var hideTimer = Timer()
         var highScore = 0
+       var onlineIsActivated = 0
+    
+    @IBOutlet weak var enemyScoreLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     override func viewDidLoad() {
         restartButton.isHidden = true
+        
+        enemyScoreLabel.isHidden = true
         super.viewDidLoad()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
         counter = 10
@@ -185,6 +190,10 @@ class GameViewController: UIViewController {
              }
              
          }
-   
+    @IBAction func goBackButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toChooseSc", sender: nil)
+        
+    }
+    
 
 }

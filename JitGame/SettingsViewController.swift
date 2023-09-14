@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
     @IBAction func logOutButton(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            self.performSegue(withIdentifier: "toVC", sender: nil)
+            self.performSegue(withIdentifier: "toVD", sender: nil)
         }catch{
             print("error")
         }

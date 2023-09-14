@@ -11,7 +11,7 @@
         <!--Signing View Controller-->
         <scene sceneID="2bx-j0-xqv">
             <objects>
-                <viewController id="sH0-Gm-UXW" customClass="SigningViewController" customModule="JitGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sH0-Gm-UXW" customClass="SigningViewController" customModule="JitGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2xe-AS-n8N">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="18Z-q6-D5t"/>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fwK-UJ-5VU"/>
                     <connections>
                         <outlet property="gidsignin" destination="N8k-Kk-4cO" id="w0a-O4-bcf"/>
                         <outlet property="passwordText" destination="bmv-sy-wz0" id="cjt-Dg-dgO"/>
@@ -195,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOX-aq-9kV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="1939"/>
+            <point key="canvasLocation" x="2636" y="1493"/>
         </scene>
         <!--Duello Rankings-->
         <scene sceneID="3T7-JD-LaA">
@@ -211,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zm-PZ-wXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="1332"/>
+            <point key="canvasLocation" x="2636" y="794"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EWh-Mg-Kdy">
@@ -230,7 +231,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vj-gC-D8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="1747"/>
+            <point key="canvasLocation" x="1517" y="1065"/>
         </scene>
         <!--Settings-->
         <scene sceneID="a0q-UW-orT">
@@ -254,17 +255,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" selectedImage="gearshape.fill" id="RMO-sq-Oud"/>
+                    <connections>
+                        <segue destination="sH0-Gm-UXW" kind="showDetail" identifier="toVD" id="sJa-RS-6ZV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBk-Na-peu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674" y="-253"/>
+            <point key="canvasLocation" x="674" y="1601"/>
         </scene>
         <!--Duello(Play Online)-->
         <scene sceneID="klS-6v-2Me">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="hk1-iJ-9y0" customClass="multiPlayerViewController" customModule="JitGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5R-Wq-1ut">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-cs-IBz">
@@ -335,6 +339,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="HjY-t7-zHF"/>
         <segue reference="ZTV-HX-g62"/>
         <segue reference="4Tj-ag-SfC"/>
         <segue reference="aT8-vh-Z7m"/>
